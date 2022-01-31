@@ -5,9 +5,51 @@
 }
 
 /*Etiquetas generales*/
+body{
+  background-color:var(--dark-blue);
+}
+h1{
+  font-size: 20px;
+  color: white;
+}
 
+p{
+  font-size: 20px;
+  font-family: monospace;
+  color: white;
+
+}
 /*Etiquetas generales fin*/
 
 /*Clases*/
+.line,
+.text{
+  color:var(--mustard-yellow);
+  display: inline;
+  position: absolute;
+  left: 45%;
+  top: 10%;
+  font-weight: bolder;
+}
+
+.line {
+  position: absolute;
+  left: 11.5%;
+  top: 10%;
+  
+}
+
+.text{
+  position: absolute;
+  left:19%;
+  top:11%;
+ text-transform: uppercase;
+ font-family: arial;
+ font-size: 15px;
+}
+.side-image1{
+  max-width: 15%;
+  height: auto;
+}
 
 /*Clases fin*/
