@@ -9,6 +9,13 @@
 }
 
 /*Etiquetas generales*/
+body {
+  background-color: var(--dark-blue);
+}
+h1 {
+  font-size: 20px;
+  color: white;
+}
 
 body {
   font-weight: 500;
@@ -59,6 +66,10 @@ figure {
   display: grid;
 }
 
+img {
+  width: 100%;
+}
+
 /*Etiquetas generales fin*/
 
 /*Clases*/
@@ -105,16 +116,20 @@ figure {
 }
 
 .main-section {
+  margin: auto;
+  max-width: 1500px;
   display: grid;
   place-content: center;
   grid-template-columns: 5vw auto 1fr auto 5vw;
-  grid-template-rows: 100vh auto auto auto auto;
+  grid-template-rows: 1fr auto auto auto auto;
   grid-template-areas:
     ". follow   hero    start ."
-    ".   .    section-1   .   .";
+    ".   .    content   .   .";
 }
 
 .hero {
+  padding-top: 15rem;
+  padding-bottom: 50rem;
   grid-area: hero;
   max-width: var(--max-width);
   margin: auto;
@@ -160,12 +175,21 @@ figure {
   z-index: -1;
 }
 
+.gradient {
+  top: 1000px;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0b1d26 61.38%);
+  background-size: cover;
+  z-index: -1;
+}
+
 .follow-us {
   grid-area: follow;
   /* padding-top: 12rem; */
   /* padding-bottom: 52rem; */
-  top: 0;
-  position: sticky;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -177,8 +201,6 @@ figure {
   grid-area: start;
   /* padding-top: 12rem; */
   /* padding-bottom: 52rem; */
-  position: sticky;
-  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -230,7 +252,56 @@ figure {
   z-index: 2;
 }
 
+.content {
+  grid-area: content;
+}
+
+.line,
+.text {
+  color: var(--mustard-yellow);
+  display: inline;
+  position: absolute;
+  left: 45%;
+  top: 10%;
+  font-weight: bolder;
+}
+
+.line {
+  position: absolute;
+  left: 11.5%;
+  top: 10%;
+}
+
+.text {
+  position: absolute;
+  left: 19%;
+  top: 11%;
+  text-transform: uppercase;
+  font-family: arial;
+  font-size: 15px;
+}
+
 .section-1 {
-  grid-area: section-1;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 114px;
+}
+
+.icon-01 {
+  position: absolute;
+}
+
+.section-1__content {
+  max-width: 632px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding-top: 85px;
+  padding-left: 135px;
+}
+
+.section-1__image {
 }
 /*Clases fin*/
