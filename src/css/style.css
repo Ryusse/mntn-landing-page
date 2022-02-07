@@ -215,7 +215,7 @@ img {
 }
 
 .guide {
-  position: absolute;
+  position: relative;
 }
 
 .guide__text {
@@ -238,6 +238,7 @@ img {
 }
 
 .scroll {
+  margin-right: auto;
   display: flex;
   gap: 1rem;
   justify-content: start;
@@ -289,9 +290,7 @@ img {
   position: absolute;
 }
 
-.section-1__content,
-.section-2__content,
-.section-3__content {
+.section__content {
   max-width: 670px;
   display: flex;
   flex-direction: column;
