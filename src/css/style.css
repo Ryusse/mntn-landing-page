@@ -111,6 +111,10 @@ img {
   backdrop-filter: blur(10px);
 }
 
+.toggle {
+  display: none;
+}
+
 .navbar__list {
   display: flex;
   justify-content: center;
@@ -377,6 +381,78 @@ img {
   .navbar,
   .account {
     display: none;
+  }
+
+  .toggle {
+    position: relative;
+    display: grid;
+    z-index: 5;
+    width: 27px;
+    height: 20px;
+  }
+
+  .toggle__line {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .toggle__line:nth-child(1) {
+    top: 0;
+  }
+
+  .toggle.open .toggle__line:nth-child(1) {
+    top: 45%;
+    transform: rotate(45deg);
+  }
+
+  .toggle__line:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .toggle.open .toggle__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .toggle__line:nth-child(3) {
+    bottom: 0;
+    width: 50%;
+  }
+
+  .toggle.open .toggle__line:nth-child(3) {
+    bottom: 45%;
+    width: 100%;
+    transform: rotate(-45deg);
+  }
+
+  .menu {
+    background-color: var(--dark-blue);
+    z-index: 3;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    place-content: center;
+    padding: 3rem;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu.open {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
   }
 
   .icon {
