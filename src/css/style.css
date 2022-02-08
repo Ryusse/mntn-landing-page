@@ -107,7 +107,7 @@ img {
 
 .header.scroll-active {
   background-color: var(--dark-blue-opacity);
-  border-bottom: 1px solid var(--white);
+  border-bottom: 0.5px solid var(--white);
   backdrop-filter: blur(10px);
 }
 
@@ -123,6 +123,28 @@ img {
 
 .navbar__link {
   padding: 0.5rem 1.2rem;
+}
+
+.menu {
+  background-color: var(--dark-blue);
+  z-index: 3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  place-content: center;
+  padding: 3rem;
+  transform: translate3d(0, -100%, 0);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center;
 }
 
 .account {
@@ -429,30 +451,8 @@ img {
     transform: rotate(-45deg);
   }
 
-  .menu {
-    background-color: var(--dark-blue);
-    z-index: 3;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    display: grid;
-    place-content: center;
-    padding: 3rem;
-    transform: translate3d(0, -100%, 0);
-    transition: all 0.3s ease-in-out;
-  }
-
   .menu.open {
     transform: translate3d(0, 0, 0);
-  }
-
-  .menu__list {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    text-align: center;
   }
 
   .icon {
